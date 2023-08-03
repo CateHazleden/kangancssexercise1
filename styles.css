@@ -1,0 +1,11 @@
+h1 {
+    font-family: Arial, sans-serif;
+}
+
+p {
+    color: blue;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
