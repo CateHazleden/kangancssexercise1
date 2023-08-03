@@ -5,8 +5,57 @@ h1 {
 p {
     color: blue;
 }
-img {
-    display: block;
-    margin: 0 auto;
-    height: 30%;
+
+.animation {
+    /*display: block;
+    margin: 0 auto;*/
+    width: 100%;
+    height: auto;
+    padding-bottom: 66.66%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("image-1.jpg");
+    animation: imageAnimation 15s infinite;
+    animation-timing-function: ease-in-out;
 }
+
+@media screen and (min-width: 768px) {
+    .image-container {
+      width: 50%;
+      padding-bottom: 33.33%; /* Adjust aspect ratio for larger screens if needed */
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .image-container {
+      width: 33.33%;
+      padding-bottom: 22.22%; /* Adjust aspect ratio for even larger screens if needed */
+    }
+  }
+
+@keyframes imageAnimation {
+    0%, 16.66% {
+    background-image: url("image-1.jpg");
+    opacity: 0;
+    }
+    16.67%, 33.33% {
+    background-image: url("image-2.jpg");
+    opacity: 1;
+    }
+    33.34%, 50% {
+    background-image: url("image-3.jpg");
+    opacity: 0;
+    }
+    51%, 67.66% {
+    background-image: url("image-4.jpg");
+    opacity: 1;
+    }
+    67.67%, 83.33% {
+    background-image: url("image-5.jpg");
+    opacity: 0;
+    }
+    83.34%, 100% {
+    background-image: url("image-6.jpg");
+    opacity: 1;
+    }
+  }
